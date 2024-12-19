@@ -459,6 +459,7 @@ ul li a:hover {
 
 .bulle {
     position: absolute;
+    border-radius: 50%;
 }
 
 .bulle1 {
