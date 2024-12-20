@@ -7,7 +7,7 @@
 :root {
     --white: #ffffff;
     --orange: #CF801D;
-    --black: #000000;
+    --black: #060218;
     --light-orange: #CFA364;
     --green : #6B8343;
 }
@@ -63,6 +63,7 @@ header {
 }
 
 nav {
+    margin-top: 2vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -295,13 +296,13 @@ p{
     align-items: center;
 }
 
-ul {
+.sidenav ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-li::before {
+.sidenav li::before {
     content: "";
     border-color: transparent var(--white);
     border-style: solid;
@@ -314,7 +315,7 @@ li::before {
     position: relative;
 }
 
-li {
+.sidenav li {
     font-size: 2rem;
     margin-bottom: 3.5dvh;
     padding-bottom: 20px;
@@ -322,7 +323,7 @@ li {
     margin-left: 20px;
 }
 
-ul li a:hover {
+.sidenav ul li a:hover {
     color: var(--orange);
     background-color: var(--orange);
 }
@@ -608,4 +609,12 @@ a.button-start:hover{
     margin-left: 2vw;
     margin-top: 10vh;
     margin-bottom: 0;
+}
+
+
+li{
+    color: var(--white);
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    list-style: none;
 }
