@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "name": "BrainOut",
+        "description": "Description du projet 1",
+        "image": "img/mockup-resaweb.jpeg",
+        "image2": "img/mockup-resaweb2.jpeg",
+        "image3": "",
+        "date": "Janvier 2024 - Juin 2024"
+    },
+    {
+        "id": 2,
+        "name": "Datadopt'",
+        "description": "Description du projet 2",
+        "image": "img/mockup-dataviz.jpeg",
+        "image2": "img/mockup-datavizt2.jpeg",
+        "image3": "img/mockup-dataviz3.jpeg",
+        "date": "Octobre 2024 - Décembre 2024"
+    },
+    {
+        "id": 3,
+        "name": "MerMade",
+        "description": "Description du projet 3",
+        "image": "img/mockup-mermade.jpeg",
+        "image2": "img/mockup-mermade2.jpeg",
+        "image3": "",
+        "date": "Jeudi 5 décembre 2024"
+    },
+    {
+        "id": 4,
+        "name": "UI Carambar",
+        "description": "Description du projet 4",
+        "image": "img/mockup-maquetteUI.jpeg",
+        "image2": "img/mockup-maquetteUI2.jpeg",
+        "image3": "img/mockup-maquetteUI3.jpeg",
+        "date": "Juin 2024"
+    }
+]
