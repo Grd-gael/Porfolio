@@ -104,6 +104,10 @@ header .right-nav>a:hover::after {
     gap: 30px;
 }
 
+h2{
+    color: var(--white);
+}
+
 .title-nav{
     color: var(--white);
     font-size: 1.9rem;
@@ -128,6 +132,10 @@ p{
 
 .light-orange {
     color: var(--light-orange);
+}
+
+.keyWord{
+    color: linear-gradient(90deg, var(--orange),#CC5050);
 }
 
 /* ---- Burger Button & Animation Class ---- */
@@ -535,6 +543,7 @@ p{
     justify-content: center;
 }
 
+
 .titles{
     margin-top: 10vh;
 }
@@ -577,7 +586,7 @@ p{
 
 
 
-a.button-start {
+a.button {
     cursor: pointer;
     color: var(--white);
     width: 230px;
@@ -595,7 +604,7 @@ a.button-start {
     transition: all 1s ease;
 }
 
-a.button-start:hover{
+a.button:hover{
     outline-offset: 10px;
     border: 2px solid var(--orange);
     outline: solid transparent 1px;
@@ -603,18 +612,180 @@ a.button-start:hover{
 
 /* --- Presentation ---- */
 
-.Hello-text{
-    color: var(--white);
-    font-size: 3rem;
-    margin-left: 2vw;
-    margin-top: 10vh;
-    margin-bottom: 0;
+.bulle-container2{
+    position: absolute;
+    height: 300dvh;
+    width: 100vw;
+    z-index: -1;
+    overflow: hidden;
 }
 
+aside{
+    float: left;
+    height: 270vh;
+    margin-bottom: 10vh;
+    width: 230px;
+}
+
+aside>h1{
+    position: absolute;
+    writing-mode: vertical-rl;
+    color: #757575;
+    font-size: 9rem;
+    margin-left: 0;
+    margin-top: 6vh;
+    left: -50px;
+    font-family: "Aboreto", system-ui;
+}
+
+section.presentation-flex{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 10vh;
+}
+
+.presentation-text:nth-child(1){
+    max-width: 570px;
+}
+
+.presentation-text:nth-child(2){
+    max-width: 650px;
+}
+
+.Hello-text{
+    display: inline-block;
+    font-size: 5.5rem;
+    transform: rotate(-10deg);
+}
+
+.presentation-text{
+    max-width: 570px;
+    text-align: left;
+    line-height: 1.7;
+}
+
+.link-cv{
+    color: var(--white);
+    font-size: 1.2rem;
+    text-decoration: underline;
+    transition: all 0.5s ease;
+}
+
+.link-cv:hover{
+    color: var(--orange);
+}
+
+
+svg.presentation-img{
+    position: relative;
+    margin-right: 10vw;
+}
+.margin-right{
+    margin-right: 230px;
+}
+
+.section-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    margin-bottom: 10vh;
+    margin-right: 230px;
+}
+
+
+.section-title hr{
+    width: 400px;
+    height: 5px;
+    background-color: var(--white);
+}
+
+.section-title h2{
+    font-size: 2rem;
+    margin-left: 1vw;
+    margin-right: 1vw;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    line-height: 1.7;
+}
+
+li:nth-child(1){
+    color: var(--white);
+    font-size: 1.2rem;
+    list-style: none;
+    margin-bottom: 10px;
+}
 
 li{
     color: var(--white);
-    font-family: "Montserrat", sans-serif;
     font-size: 1rem;
     list-style: none;
 }
+
+.opquast{
+    text-align: left;
+    line-height: 1.7;
+    margin-bottom: 10vh;
+}
+
+
+.accordion {
+    width: 65vw;
+    background-color: var(--white);
+    color: var(--black);
+    overflow: hidden;
+    border: solid var(--white) 1px;
+    border-radius: 4px;
+  }
+  
+  .accordion button {
+    appearance: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 16px;
+    background-color: transparent;
+    color: var(--black);
+    border: none;
+    text-align: left;
+    font-size: 1rem;
+    font-family: inherit;
+    font-weight: bolder;
+  }
+  
+  .accordion button:hover {
+    cursor: pointer;
+  }
+  
+  .accordion svg {
+    width: 16px;
+    transform: rotate(180deg);
+    transition: all ease 0.3s;
+  }
+  
+  .accordion button[aria-expanded='true'] svg {
+    transform: rotate(0deg);
+  }
+  
+  .accordion p {
+    color: var(--black);
+    text-align: left;
+    display: none;
+    padding: 0 16px 16px;
+    margin: 0;
+  }
+  
+  .accordion button[aria-expanded='true'] + p {
+    display: block;
+  }
+
+
+  a.lien-contact{
+    margin-left: 43vw;
+  }
