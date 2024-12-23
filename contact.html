@@ -36,8 +36,8 @@
                 </a>
             </div>
             <div class="right-nav">
-                <a href="presentation.html" class="montserrat-400">Présentation</a>
                 <a href="projets.html" class="montserrat-400">Projets</a>
+                <a href="presentation.html" class="montserrat-400">Présentation</a>
                 <a href="contact.html" class="montserrat-400">Contact</a>
             </div>
             <div class="menu">
@@ -51,11 +51,12 @@
     </header>
     <div class="sidenav cache">
         <div class="sidenav-placement">
-            <ul><a href="presentation.html" class="montserrat-200 cache1">
-                    <li>Présentation</li>
-                </a>
-                <div class="line cache4"></div><a href="projets.html" class="montserrat-200 cache2">
+            <ul>
+                <a href="projets.html" class="montserrat-200 cache1">
                     <li>Projets</li>
+                </a>
+                <div class="line cache4"></div><a href="presentation.html" class="montserrat-200 cache2">
+                    <li>Présentation</li>
                 </a>
                 <div class="line cache4"></div><a href="contacts.html" class="montserrat-200 cache3">
                     <li>Contact</li>
@@ -65,8 +66,24 @@
         </div>
     </div>
 
+    <aside class="aside-contact">
+        <h1>Contacts</h1>
+    </aside>
 
-    <h2>Contacts</h2>
+    <form action="">
+        <h2 class="aboreto title-form">Contactez moi !</h2>
+        <div class="form-nom-prenom">
+            <label for="nom" class="aboreto">Entrez votre nom</label>
+            <input type="text" placeholder="Nom" class="nom" id="nom">
+            <label for="prenom" class="aboreto">Entrez votre prénom</label>
+            <input type="text" placeholder="Prénom" class="prenom" id="prenom">
+        </div>
+        <label for="email" class="aboreto">Entrez votre email</label>
+        <input type="email" placeholder="Email" class="email" id="email">
+        <label for="message" class="aboreto">Entrez votre message</label>
+        <textarea name="" id="message" cols="40" rows="10" placeholder="Message" class="message"></textarea>
+        <button type="submit" class="submit">Envoyer</button>
+    </form>
     
     <script src="script.js"></script>
 </body>
