@@ -70,20 +70,35 @@
         <h1>Contacts</h1>
     </aside>
 
-    <form action="">
+    <form method="post" id="form-contact">
         <h2 class="aboreto title-form">Contactez moi !</h2>
         <div class="form-nom-prenom">
-            <label for="nom" class="aboreto">Entrez votre nom</label>
-            <input type="text" placeholder="Nom" class="nom" id="nom">
-            <label for="prenom" class="aboreto">Entrez votre prénom</label>
-            <input type="text" placeholder="Prénom" class="prenom" id="prenom">
+            <label for="nom" class="aboreto hidden">Entrez votre nom</label>
+            <input type="text" placeholder="Nom *" class="nom" id="nom" name="nom">
+            <label for="prenom" class="aboreto hidden">Entrez votre prénom</label>
+            <input type="text" placeholder="Prénom *" class="prenom" id="prenom" name="prenom">
         </div>
-        <label for="email" class="aboreto">Entrez votre email</label>
-        <input type="email" placeholder="Email" class="email" id="email">
-        <label for="message" class="aboreto">Entrez votre message</label>
-        <textarea name="" id="message" cols="40" rows="10" placeholder="Message" class="message"></textarea>
-        <button type="submit" class="submit">Envoyer</button>
+        <label for="email" class="aboreto hidden">Entrez votre email</label>
+        <input type="email" placeholder="Email *" class="email" id="email" name="email">
+        <label for="message" class="aboreto hidden">Entrez votre message</label>
+        <textarea name="" id="message" cols="40" rows="10" placeholder="Message *" class="message" name="message"></textarea>
+        <button type="submit" class="submit" n>Envoyer</button>
     </form>
+
+    <!-- <?php
+
+    if isset($_POST['submit']) {
+        $nom = $_POST['nom'];
+        $prenom = $_POST['prenom'];
+        $email = $_POST['email'];
+        $message = $_POST['message'];
+
+        $retour = mail('gaelgrandval@gmail.com', 'Envoie depuis la page de contact', $message, 'From : ' . $email);
+        if ($retour) {
+            echo '<p>Votre message a bien été envoyé.</p>';
+        }
+    }
+    ?> -->
     
     <script src="script.js"></script>
 </body>

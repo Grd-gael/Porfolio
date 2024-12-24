@@ -141,7 +141,12 @@ p {
 }
 
 .keyWord {
-    color: linear-gradient(90deg, var(--orange), #CC5050);
+    display: inline-block;
+    background: linear-gradient(to left,#CC5050 20%, #F5AC4F);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: brightness(1.5);
 }
 
 /* ---- Burger Button & Animation Class ---- */
@@ -694,7 +699,12 @@ section.presentation-flex {
 }
 
 .link-cv:hover {
-    color: var(--orange);
+    display: inline-block;
+    background: linear-gradient(to left,#CC5050 20%, #F5AC4F);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: brightness(1.5);
 }
 
 
@@ -706,16 +716,16 @@ svg.presentation-img {
 }
 
 @media screen and (max-width: 1024px) {
-    
+
     .bulle-container2 {
         height: 390dvh;
     }
-    
+
     aside h1 {
         display: none;
     }
 
-    aside{
+    aside {
         width: 150px;
     }
 
@@ -733,7 +743,7 @@ svg.presentation-img {
 
 
 
-    .accordion{
+    .accordion {
         margin: auto;
     }
 }
@@ -907,13 +917,13 @@ form {
     width: 50vw;
     height: fit-content;
     margin: auto;
-    padding: 50px;
+    padding: 20px 0 50px 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-top: 10vh;
-    background: rgba(20,20,20, 0.3);
+    background: rgba(20, 20, 20, 0.3);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5.3px);
@@ -925,7 +935,9 @@ form {
     font-size: 3rem;
 }
 
-input[type="text"],input[type="email"],textarea {
+input[type="text"],
+input[type="email"],
+textarea {
     width: 30vw;
     padding: 10px;
     margin: 10px 0;
@@ -936,13 +948,17 @@ input[type="text"],input[type="email"],textarea {
 }
 
 
-input[type="text"]:focus,input[type="email"]:focus,textarea:focus {
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
     outline: var(--light-orange) solid 2px;
     background: var(--white);
     color: var(--black);
 }
 
-input[type="text"]::placeholder,input[type="email"]::placeholder,textarea::placeholder {
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+textarea::placeholder {
     font-family: 'montserrat', sans-serif;
     color: var(--black);
 }
@@ -976,6 +992,11 @@ button[type='submit']:hover {
 }
 
 label {
+    color: var(--white);
+    font-size: 1.2rem;
+}
+
+.hidden {
     height: 1px;
     left: 0;
     overflow: hidden;

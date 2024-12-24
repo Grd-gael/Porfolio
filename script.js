@@ -71,70 +71,114 @@ document.addEventListener('DOMContentLoaded', function () {
     CloseButton.addEventListener('click', function () {
         cercle.classList.remove('clip-path-active')
     });
-});
 
 
-// Accordions
 
-const accordions = document.querySelectorAll('.accordion');
+    // Accordions
 
-const accordionsTrigger = document.querySelectorAll('.accordion button');
-accordionsTrigger.forEach((trigger, index) => {
-    const accordionContent = trigger.nextElementSibling;
+    const accordions = document.querySelectorAll('.accordion');
 
-    trigger.setAttribute('aria-expanded', 'false');
-    trigger.setAttribute('id', `accordion-trigger-${index}`);
-    accordionContent.setAttribute('id', `accordion-content-${index}`);
-    trigger.setAttribute('aria-controls', `accordion-content-${index}`);
-    accordionContent.setAttribute(
-        'aria-labelledby',
-        `accordion-trigger-${index}`,
-    );
+    const accordionsTrigger = document.querySelectorAll('.accordion button');
+    accordionsTrigger.forEach((trigger, index) => {
+        const accordionContent = trigger.nextElementSibling;
 
-    trigger.addEventListener('click', () => {
-        resetAccordions(trigger.parentElement);
+        trigger.setAttribute('aria-expanded', 'false');
+        trigger.setAttribute('id', `accordion-trigger-${index}`);
+        accordionContent.setAttribute('id', `accordion-content-${index}`);
+        trigger.setAttribute('aria-controls', `accordion-content-${index}`);
+        accordionContent.setAttribute(
+            'aria-labelledby',
+            `accordion-trigger-${index}`,
+        );
 
-        const isOpen = trigger.getAttribute('aria-expanded') === 'true';
+        trigger.addEventListener('click', () => {
+            resetAccordions(trigger.parentElement);
 
-        console.log(isOpen);
+            const isOpen = trigger.getAttribute('aria-expanded') === 'true';
 
-        trigger.setAttribute('aria-expanded', !isOpen);
-        trigger.parentElement.classList.toggle('accordion--opened');
+            console.log(isOpen);
 
-        trigger.parentElement.scrollIntoView({
-            behavior: 'smooth',
-            block: 'center',
+            trigger.setAttribute('aria-expanded', !isOpen);
+            trigger.parentElement.classList.toggle('accordion--opened');
+
+            trigger.parentElement.scrollIntoView({
+                behavior: 'smooth',
+                block: 'center',
+            });
         });
     });
-});
 
-const resetAccordions = (accordionToOmit) => {
-    accordions.forEach((accordion) => {
-        if (accordion !== accordionToOmit) {
-            accordion.classList.remove('accordion--opened');
-        }
+    const resetAccordions = (accordionToOmit) => {
+        accordions.forEach((accordion) => {
+            if (accordion !== accordionToOmit) {
+                accordion.classList.remove('accordion--opened');
+            }
+        });
+
+        accordionsTrigger.forEach((trigger) => {
+            if (trigger.parentElement !== accordionToOmit) {
+                trigger.setAttribute('aria-expanded', 'false');
+            }
+        });
+    };
+
+
+    // Back to top button
+
+    // const backToTopBtn = document.getElementById('back-to-top');
+    // if (!backToTopBtn) {
+    //     return;
+    // }
+    // else {
+    //     window.addEventListener('scroll', () => {
+    //         if (window.scrollY > 200) {
+    //             backToTopBtn.style.display = 'block';
+    //         } else {
+    //             backToTopBtn.style.display = 'none';
+    //         }
+    //     });
+    //     backToTopBtn.addEventListener('click', () => {
+    //         window.scrollTo({ top: 0, behavior: 'smooth' });
+    //     });
+    // }
+
+    
+
+    // Form
+
+    const form = document.getElementById('form-contact');
+    const Inputs = document.querySelectorAll('form input');
+    console.log(Inputs);
+    const textarea = document.querySelector('form textarea');
+
+
+    // Inputs.forEach((input) => {
+    //     console.log(input);
+    //     input.addEventListener('focus', () => {
+    //         let id = input.id;
+    //         let label = document.querySelector(`label[for=${id}]`)
+    //         console.log(label);
+    //         label.classList.remove('hidden');
+    //     });
+    //     input.addEventListener('blur', () => {
+    //         let id = input.id;
+    //         let label = document.querySelector(`label[for=${id}]`)
+    //         console.log(label);
+    //         label.classList.add('hidden');
+    //     });
+    // });
+
+    Inputs.forEach((input) => {
+        input.addEventListener('mouseover', () => {
+            let id = input.id;
+            let label = document.querySelector(`label[for=${id}]`)
+            label.classList.remove('hidden');
+            label.position = 'absolute';
+            label.style.display = 'block';
+            let position = input.getBoundingClientRect();
+            label.style.top = `${position.top}px`;
+            label.style.left = `${position.left}px`;
+        });
     });
 
-    accordionsTrigger.forEach((trigger) => {
-        if (trigger.parentElement !== accordionToOmit) {
-            trigger.setAttribute('aria-expanded', 'false');
-        }
-    });
-};
-
-
-// Back to top button
-
-const backToTopBtn = document.getElementById('back-to-top');
-
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 200) {
-        backToTopBtn.style.display = 'block';
-    } else {
-        backToTopBtn.style.display = 'none';
-    }
-});
-
-backToTopBtn.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
 });
