@@ -383,6 +383,7 @@ p {
     transform: translate(-50%, -50%) rotate(-45deg);
 }
 
+
 /* Characters Accueil */
 
 .character {
@@ -632,6 +633,30 @@ a.button:hover {
     outline: solid transparent 1px;
 }
 
+a.button:focus-visible {
+    outline: solid var(--orange) 3px;
+}
+
+/* Projects */
+
+.project{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 10vh;
+    flex-direction: column;
+}
+
+.project-image{
+    width: 300px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border: solid var(--white) 1px;
+}
+
+
 /* --- Presentation ---- */
 
 .bulle-container2 {
@@ -837,7 +862,9 @@ li {
 .accordion button:hover {
     cursor: pointer;
 }
-
+.accordion button:focus-visible{
+    border: var(--orange) solid 4px;
+}
 .accordion button::after {
     content: '+';
     font-size: 1.5rem;
@@ -914,6 +941,7 @@ a.lien-contact {
 }
 
 form {
+    position: relative;
     width: 50vw;
     height: fit-content;
     margin: auto;
@@ -938,12 +966,13 @@ form {
 input[type="text"],
 input[type="email"],
 textarea {
+    font-family: 'montserrat', sans-serif;
     width: 30vw;
     padding: 10px;
-    margin: 10px 0;
+    margin: 20px 0 10px 0;
     border-radius: 8px;
     border: none;
-    background: rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.8);
     resize: none;
 }
 
@@ -1003,4 +1032,15 @@ label {
     position: absolute;
     top: -10000px;
     width: 1px;
+}
+
+.tooltip{
+    position: absolute; 
+    display: inline-block;
+    background: var(--light-orange);
+    color: var(--black); 
+    padding: 5px;
+    border-radius: 4px;
+    z-index: 1000;
+    pointer-events: none;
 }

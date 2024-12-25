@@ -73,17 +73,19 @@
     <form method="post" id="form-contact">
         <h2 class="aboreto title-form">Contactez moi !</h2>
         <div class="form-nom-prenom">
-            <label for="nom" class="aboreto hidden">Entrez votre nom</label>
-            <input type="text" placeholder="Nom *" class="nom" id="nom" name="nom">
-            <label for="prenom" class="aboreto hidden">Entrez votre prénom</label>
-            <input type="text" placeholder="Prénom *" class="prenom" id="prenom" name="prenom">
+            <label for="nom" class="montserrat-200 hidden">Entrez votre nom</label>
+            <input type="text" placeholder="Nom *" class="nom" id="nom" name="nom" autocomplete="none">
+            <label for="prenom" class="montserrat-200 hidden">Entrez votre prénom</label>
+            <input type="text" placeholder="Prénom *" class="prenom" id="prenom" name="prenom" autocomplete="none">
         </div>
-        <label for="email" class="aboreto hidden">Entrez votre email</label>
+        <label for="email" class="montserrat-200 hidden">Entrez votre email</label>
         <input type="email" placeholder="Email *" class="email" id="email" name="email">
-        <label for="message" class="aboreto hidden">Entrez votre message</label>
-        <textarea name="" id="message" cols="40" rows="10" placeholder="Message *" class="message" name="message"></textarea>
+        <label for="message" class="montserrat-200 hidden">Entrez votre message</label>
+        <textarea name="" id="message" cols="40" rows="9" placeholder="Message *" class="message" name="message" autocomplete="none"></textarea>
         <button type="submit" class="submit" n>Envoyer</button>
     </form>
+
+    <div class="tooltip montserrat-200" id="tooltip"></div>
 
     <!-- <?php
 

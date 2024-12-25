@@ -142,43 +142,71 @@ document.addEventListener('DOMContentLoaded', function () {
     //     });
     // }
 
-    
+
 
     // Form
 
     const form = document.getElementById('form-contact');
-    const Inputs = document.querySelectorAll('form input');
-    console.log(Inputs);
-    const textarea = document.querySelector('form textarea');
+    const Inputs = document.querySelectorAll('form input, form textarea');
+    const tooltip = document.getElementById('tooltip');
 
-
-    // Inputs.forEach((input) => {
-    //     console.log(input);
-    //     input.addEventListener('focus', () => {
-    //         let id = input.id;
-    //         let label = document.querySelector(`label[for=${id}]`)
-    //         console.log(label);
-    //         label.classList.remove('hidden');
-    //     });
-    //     input.addEventListener('blur', () => {
-    //         let id = input.id;
-    //         let label = document.querySelector(`label[for=${id}]`)
-    //         console.log(label);
-    //         label.classList.add('hidden');
-    //     });
-    // });
 
     Inputs.forEach((input) => {
-        input.addEventListener('mouseover', () => {
-            let id = input.id;
-            let label = document.querySelector(`label[for=${id}]`)
-            label.classList.remove('hidden');
-            label.position = 'absolute';
-            label.style.display = 'block';
-            let position = input.getBoundingClientRect();
-            label.style.top = `${position.top}px`;
-            label.style.left = `${position.left}px`;
+        input.addEventListener('focus', () => {
+            if (input.value === '') {
+                tooltip.style.display = 'none';
+            }
+            else {
+                const id = input.id;
+                const label = document.querySelector(`label[for=${id}]`);
+                tooltip.innerHTML = label.innerText;
+                let positionInput = input.getBoundingClientRect();
+                let XI = positionInput.x;
+                let YI = positionInput.y;
+                console.log(positionInput);
+                tooltip.style.display = 'block';
+                tooltip.style.top = `${YI - 30}px`;
+                tooltip.style.left = `${XI}px`;
+            }
         });
     });
 
+    Inputs.forEach((input) => {
+        input.addEventListener('input', () => {
+            if (input.value === '') {
+                tooltip.style.display = 'none';
+            }
+            else {
+                const id = input.id;
+                const label = document.querySelector(`label[for=${id}]`);
+                tooltip.innerHTML = label.innerText;
+                let positionInput = input.getBoundingClientRect();
+                let XI = positionInput.x;
+                let YI = positionInput.y;
+                console.log(positionInput);
+                tooltip.style.display = 'block';
+                tooltip.style.top = `${YI - 30}px`;
+                tooltip.style.left = `${XI}px`;
+            }
+        });
+    });
+
+    Inputs.forEach((input) => {
+        input.addEventListener('blur', () => {
+            tooltip.style.display = 'none';
+        });
+    });
+
+    // Link PDF W3C
+
+    let targets=document.querySelectorAll('.target');
+    targets.forEach((element) => {
+        element.addEventListener('click', function (event) {
+            var url = element.href;
+            window.open(url);
+            event.preventDefault();
+        });
+    });
 });
+
+
