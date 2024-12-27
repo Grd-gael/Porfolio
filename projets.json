@@ -2,50 +2,61 @@
     {
         "id": 1,
         "name": "BrainOut",
-        "description": "Description du projet 1",
+        "description": "Ce site a été réalisé dans le cadre d'un projet étudiant visant à approfondir mes compétences en développement web full-stack. Inspiré par la popularité croissante des escape games, j’ai souhaité créer une plateforme harmonieuse et fonctionnelle pour gérer l’ensemble du processus de réservation, du choix du scénario jusqu’à la confirmation. Ce projet m’a permis d’explorer les interactions entre frontend et backend, en gérant une base de données relationnelle.",
         "image": "img/mockup-resaweb.jpeg",
         "image2": "img/mockup-resaweb2.jpeg",
-        "image3": "",
+        "image3": "img/mockup-resaweb3.jpeg",
         "date": "Janvier 2024 - Juin 2024",
+        "groupe":"seul",
+        "langages":"HTML - CSS - JavaScript - PHP - MySQL",
         "link": "https://resaweb.grandval.butmmi.o2switch.site/"
     },
     {
         "id": 2,
         "name": "Datadopt'",
-        "description": "Description du projet 2",
+        "description": "Ce site a été conçu pour explorer l’utilisation de la data visualisation afin de rendre des informations accessibles et compréhensibles pour tous. Basé sur des données publiques liées à l’adoption infantile, ce projet visait à mettre en évidence la diminution de cette pratique au fil des années. En plus de permettre une analyse intuitive grâce à des graphiques interactifs, ce travail m’a offert l’opportunité de maîtriser des outils spécialisés comme Chart.js, tout en renforçant mes compétences en manipulation de données.",
         "image": "img/mockup-dataviz.jpeg",
         "image2": "img/mockup-dataviz2.jpeg",
         "image3": "img/mockup-dataviz3.jpeg",
         "date": "Octobre 2024 - Décembre 2024",
+        "groupe":"3",
+        "langages":"HTML - CSS - JavaScript",
         "link": "https://grd-gael.github.io/Datadopt/"
     },
     {
         "id": 3,
         "name": "MerMade",
-        "description": "Description du projet 3",
+        "description": "Lors de la Nuit de l'Info, un hackathon de développement web réalisé de nuit en 16 heures, notre équipe a conçu un site visant à sensibiliser le public sur la pollution des océans. Proposé par l'association Race for Water, ce projet collaboratif avait pour objectif de mettre en lumière les impacts environnementaux de nos actions à travers une comparaison entre l'océan et le corps humain, tout en proposant des solutions concrètes pour agir. Dans ce contexte intense, nous avons uni nos compétences pour développer une plateforme éducative et interactive en respectant les contraintes de temps et de faisabilité.",
         "image": "img/mockup-mermade.jpeg",
         "image2": "img/mockup-mermade2.jpeg",
-        "image3": "",
+        "image3": "img/mockup-mermade3.jpeg",
         "date": "Jeudi 5 décembre 2024",
+        "groupe":"8",
+        "langages":"HTML - CSS - JavaScript",
         "link": "https://dragondoee.github.io/mermade/"
     },
     {
         "id": 4,
         "name": "UI Carambar",
-        "description": "Description du projet 4",
+        "description": "Ce projet avait pour objectif de repenser entièrement l’interface utilisateur du site de la marque Carambar pour refléter une image plus saine et moins centrée sur la gourmandise. À travers cette refonte, nous avons travaillé sur un design moderne et épuré, mettant en avant l'importance de l'aspect visuel d'un site sur le message qu'il transmet aux visiteurs. Ce projet nous a permis de combiner créativité et stratégie pour adapter une identité visuelle aux attentes d’un public plus soucieux de sa santé et de l’environnement.",
         "image": "img/mockup-maquetteUI.jpeg",
         "image2": "img/mockup-maquetteUI2.jpeg",
         "image3": "img/mockup-maquetteUI3.jpeg",
-        "date": "Juin 2024"
+        "date": "Juin 2024",
+        "groupe":"2",
+        "langages":"Figma"
     },
 
     {
         "id": 5,
-        "name": "UI Carambar",
-        "description": "Description du projet 5",
-        "image": "img/mockup-maquetteUI.jpeg",
-        "image2": "img/mockup-maquetteUI2.jpeg",
-        "image3": "img/mockup-maquetteUI3.jpeg",
-        "date": "Juin 2024"
+        "name": "Blog",
+        "description": "Ce blog a été développé dans le cadre d’un projet étudiant visant à nous familiariser avec la gestion des sessions utilisateur et la mise en place d’un back-office. À travers ce projet, nous avons appris à implémenter un système d’authentification sécurisé, à gérer les rôles des utilisateurs (administrateurs et lecteurs) et à concevoir une interface d’administration permettant de créer, modifier et supprimer des articles et des comptes usagers. Ce travail m'a permis de renforcer mes compétences en développement full-stack et en gestion des données utilisateur.",
+        "image": "img/mockup-blog.jpeg",
+        "image2": "img/mockup-blog2.jpeg",
+        "image3": "img/mockup-blog3.jpeg",
+        "date": "Octobre 2024 - Novembre 2024",
+        "groupe":"seul",
+        "langages":"HTML - CSS - JavaScript - PHP - MySQL",
+        "link":"http://blog.grandval.butmmi.o2switch.site/"
     }
 ]
