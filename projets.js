@@ -22,10 +22,14 @@ document.addEventListener('DOMContentLoaded', function () {
                     <div class=close></div>
                         <h3 class="aboreto">${project.name}</h3>
                         <p class="date">${project.date}</p>
-                        <img class="image1" src="${project.image}" alt="" class="project-image">
-                        <img class="image2" src="${project.image2}" alt="" class="project-image">
-                        <img class="image3" src="${project.image3}" alt="" class="project-image">
+                        <p class="groupe">${project.groupe}</p>
+                        <img src="${project.image}" alt="" class="main-image">
+                        <div class="container-select-images"><img src="${project.image}" alt="" class="project-image image1 image-selected">
+                        <img src="${project.image2}" alt="" class="project-image image2">
+                        <img src="${project.image3}" alt="" class="project-image image3">
+                        </div>
                         <p class="description">${project.description}</p>
+                        <p class="technologies">${project.technologies}</p>
                         <a href="${project.link}" class="montserrat-400 button" target="_blank">Voir le projet</a>
                     </div>
                     `;
@@ -33,23 +37,42 @@ document.addEventListener('DOMContentLoaded', function () {
 
             projectElement.addEventListener('click', function () {
                 let projetpopup = document.querySelector(`.popup-${project.id}`);
-                console.log(projetpopup);
+                containerPopup.classList.add('visible');
                 projetpopup.classList.add('visible');
             });
 
             const close = document.querySelector('.close');
             close.addEventListener('click', function () {
                 let projetpopup = document.querySelector(`.popup-${project.id}`);
+                containerPopup.classList.remove('visible');
                 projetpopup.classList.remove('visible');
             });
 
+
             window.addEventListener('click', (e) => {
                 let projetpopup = document.querySelector(`.popup-${project.id}`);
-                if (e.target == projetpopup) {
+                const nav =document.querySelector('header');
+                if (e.target == containerPopup || e.target == nav) {
                     console.log(e.target);
+                    containerPopup.classList.remove('visible');
                     projetpopup.classList.remove('visible');
                 }
             });
+
+            const images = document.querySelectorAll('.project-image');
+
+            images.forEach((image) => {
+                image.addEventListener('click', function () {
+                    images.forEach((image) => {
+                        image.classList.remove('image-selected');
+                    });
+                    image.classList.add('image-selected');
+                    const mainImage = document.querySelector('.main-image');
+                    console.log(mainImage);
+                    mainImage.src = image.src;
+                });
+            });
+
         });
     })
 
