@@ -386,7 +386,7 @@ p {
 
 /* Characters Accueil */
 
-.character {
+/* .character {
     position: relative;
     left: 10px;
     filter: drop-shadow(0 25px 15px rgba(0, 0, 0, 0.2));
@@ -474,7 +474,7 @@ p {
         filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.6));
         transform: translateY(0);
     }
-}
+} */
 
 /* ---- Main Screen ---- */
 
@@ -581,7 +581,7 @@ p {
 .main-title-secondary {
     color: var(--white);
     font-size: 3.5rem;
-    margin-left: 30vw;
+    margin-left: 400px;
     margin-top: 0;
 }
 
@@ -639,6 +639,136 @@ a.button-start {
 
 a.button:focus-visible {
     outline: solid var(--orange) 3px;
+}
+
+@media (max-width: 768px) {
+    .bulle1 {
+        width: 600px;
+        height: 600px;
+        bottom: -300px;
+        left: -200px;
+    }
+
+    .bulle2 {
+        width: 450px;
+        height: 450px;
+        top: -200px;
+        left: 10vw;
+    }
+
+    .bulle3 {
+        width: 200px;
+        height: 200px;
+        right: 70px;
+        bottom: -100px;
+    }
+
+    .bulle4 {
+        width: 180px;
+        height: 180px;
+        bottom: 80px;
+        right: 0px;
+    }
+
+    .bulle5 {
+        width: 120px;
+        height: 120px;
+        top: 200px;
+        right: 200px;
+    }
+
+    .bulle6 {
+        width: 80px;
+        height: 80px;
+        top: 200px;
+        right: 180px;
+    }
+
+    .main-title-name {
+        font-size: 4rem;
+        margin-left: 20px;
+    }
+
+    .main-title-secondary {
+        font-size: 2.5rem;
+        margin-left: 400px;
+    }
+
+    a.button {
+        width: 200px;
+        height: 45px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 700px) {
+    .bulle1,
+    .bulle2,
+    .bulle3,
+    .bulle4,
+    .bulle5,
+    .bulle6 {
+        animation: none; /* Simplify animations on very small devices for performance */
+    }
+
+    .main-title-name {
+        font-size: 2.7rem;
+        margin-left: 20px;
+    }
+
+    .main-title-secondary {
+        font-size: 1.7rem;
+        margin-top: 10px;
+        margin-left: 300px;
+    }
+
+    a.button {
+        width: 180px;
+        height: 40px;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .bulle1,
+    .bulle2,
+    .bulle3,
+    .bulle4,
+    .bulle5,
+    .bulle6 {
+        animation: none; /* Simplify animations on very small devices for performance */
+    }
+
+    .bulle3, .bulle4{
+        display: none;
+    }
+
+    .bulle5{
+       right: 0;
+       top: 40dvh;
+    }
+
+    .bulle6{
+        right: 0;
+        top: 35dvh;
+    }
+
+    .main-title-name {
+        font-size: 2.2rem;
+        margin-left: 20px;
+    }
+
+    .main-title-secondary {
+        font-size: 1.4rem;
+        margin-top: 10px;
+        margin-left: 240px;
+    }
+
+    a.button {
+        width: 180px;
+        height: 40px;
+        font-size: 0.8rem;
+    }
 }
 
 /* Projects */
@@ -1122,6 +1252,8 @@ button:focus-visible {
 
 /* --- Presentation ---- */
 
+
+
 .bulle-container2 {
     position: absolute;
     height: 290dvh;
@@ -1208,6 +1340,12 @@ svg.presentation-img {
 }
 
 @media screen and (max-width: 1024px) {
+
+    .flex-responsive{
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+    }
 
     .bulle-container2 {
         height: 390dvh;
