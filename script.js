@@ -191,12 +191,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    Inputs.forEach((input) => {
-        input.addEventListener('blur', () => {
-            tooltip.style.display = 'none';
-        });
-    });
-
     // Link PDF W3C
 
     let targets=document.querySelectorAll('.target');

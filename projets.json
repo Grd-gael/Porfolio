@@ -7,7 +7,7 @@
         "image2": "img/mockup-resaweb2.jpeg",
         "image3": "img/mockup-resaweb3.jpeg",
         "date": "Janvier 2024 - Juin 2024",
-        "groupe":"seul",
+        "groupe":"Seul",
         "technologies":"HTML - CSS - JavaScript - PHP - MySQL",
         "link": "https://resaweb.grandval.butmmi.o2switch.site/"
     },
@@ -19,7 +19,7 @@
         "image2": "img/mockup-dataviz2.jpeg",
         "image3": "img/mockup-dataviz3.jpeg",
         "date": "Octobre 2024 - Décembre 2024",
-        "groupe":"3",
+        "groupe":"Équipe de 3",
         "technologies":"HTML - CSS - JavaScript",
         "link": "https://grd-gael.github.io/Datadopt/"
     },
@@ -31,7 +31,7 @@
         "image2": "img/mockup-mermade2.jpeg",
         "image3": "img/mockup-mermade3.jpeg",
         "date": "Jeudi 5 décembre 2024",
-        "groupe":"8",
+        "groupe":"Équipe de 8",
         "technologies":"HTML - CSS - JavaScript",
         "link": "https://dragondoee.github.io/mermade/"
     },
@@ -43,7 +43,7 @@
         "image2": "img/mockup-maquetteUI2.jpeg",
         "image3": "img/mockup-maquetteUI3.jpeg",
         "date": "Juin 2024",
-        "groupe":"2",
+        "groupe":"Équipe de 2",
         "technologies":"Figma"
     },
 
@@ -55,7 +55,7 @@
         "image2": "img/mockup-blog2.jpeg",
         "image3": "img/mockup-blog3.jpeg",
         "date": "Octobre 2024 - Novembre 2024",
-        "groupe":"seul",
+        "groupe":"Seul",
         "technologies":"HTML - CSS - JavaScript - PHP - MySQL",
         "link":"http://blog.grandval.butmmi.o2switch.site/"
     }
