@@ -899,6 +899,10 @@ a.button:focus-visible {
     cursor: pointer;
 }
 
+.project:hover img {
+    transform: scale(1.2);
+}
+
 .project:hover .project-link {
     background-color: var(--white);
     color: var(--black);
@@ -920,7 +924,6 @@ button:focus-visible {
     object-fit: cover;
     animation: fadeIn 1s ease forwards;
 }
-
 
 .link-draw{
     position: absolute;
@@ -1720,7 +1723,7 @@ label {
     grid-column-gap: 10px;
     grid-row-gap: 10px;
     height: 90dvh;
-    width: 100vw;
+    width: 50vw;
     }
     
     .draw1 { grid-area: 1 / 1 / 4 / 2; }
@@ -1733,4 +1736,6 @@ label {
     .draw8 { grid-area: 3 / 5 / 6 / 6; }
     .draw9 { grid-area: 4 / 1 / 6 / 2; }
     .draw10 { grid-area: 3 / 2 / 6 / 3; }
+    
+
     
