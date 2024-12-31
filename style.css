@@ -1643,4 +1643,60 @@ label {
 /* Dessin page */
 
 
+.flex-page-dessin {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: row;
+    margin-top: 10vh;
+}
+
+/* Style général pour la section */
+.draws {
+    width: 80vw;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+    margin: 20px;
+    padding: 10px;
+    justify-items: center;
+}
+
+/* Style des images */
+.draws img {
+    width: 100%;
+    height: auto; 
+    border-radius: 8px; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Effet de survol des images */
+.draws img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0px 10px rgba(255, 255, 255, 0.8);
+}
+
+/* Style individuel pour chaque div de dessin (optionnel) */
+.draw2, .draw3, .draw4, .draw5, .draw6, .draw7, .draw8, .draw9, .draw10 {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+
+/* Ajout d'un peu de padding au niveau des images */
+.draw2 img, .draw3 img, .draw4 img, .draw5 img, .draw6 img, .draw7 img, .draw8 img, .draw9 img, .draw10 img {
+    padding: 3px;
+}
+
+
+@media screen and (max-width: 1024px) {
+    .flex-page-dessin {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .draws {
+        width: 90vw;
+    }
     
+}

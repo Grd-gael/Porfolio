@@ -29,5 +29,6 @@
     "label-prenom":"Prénom",
     "label-email":"Email",
     "label-message":"Message",
-    "btn-envoyer":"Envoyer"
+    "btn-envoyer":"Envoyer",
+    "aside-dessins":"Dessins"
 }
