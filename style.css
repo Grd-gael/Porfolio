@@ -1128,6 +1128,10 @@ button:focus-visible {
     .technologies {
         font-size: 0.8rem;
     }
+
+    .link-draw{
+        bottom: -350px;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -1149,6 +1153,9 @@ button:focus-visible {
     .project-link {
         font-size: 1rem;
         padding: 8px;
+    }
+    .link-draw{
+        bottom: -400px;
     }
 }
 
@@ -1253,14 +1260,20 @@ section.presentation-flex {
     filter: brightness(1.5);
 }
 
-
-.presentation-img {
-    width: 350px;
-    height: 350px;
-    object-fit:cover;
+.container-img-presentation{
+    height: 380px;
+    width: auto;
+    overflow: hidden;
     position: relative;
     margin-right: 10vw;
     border: solid var(--white) 1px;
+}
+
+.presentation-img {
+    height: 380px;
+    width: auto;
+    transform: scale(1.4) translate(-15px , -40px);
+    object-fit:cover;
 }
 
 
