@@ -25,11 +25,12 @@
     "link-dessin":"Mes dessins !",
     "aside-contact":"Contact",
     "contactez-moi":"Contactez moi",
-    "label-nom":"Nom",
-    "label-prenom":"Prénom",
-    "label-email":"Email",
-    "label-message":"Message",
+    "label-nom":"Entrez votre nom *",
+    "label-prenom":"Entrez votre prénom *",
+    "label-email":"Entrez votre mail *",
+    "label-message":"Entrez votre message *",
     "btn-envoyer":"Envoyer",
+    "champs-obligatoires":"* Champs obligatoires",
     "aside-dessins":"Dessins",
     "retour":"< Retour"
 }

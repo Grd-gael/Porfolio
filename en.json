@@ -24,7 +24,12 @@
     "link-dessin": "My drawings!",
     "aside-contact": "Contact",
     "contactez-moi": "Contact Me",
+    "label-nom":"Enter your last name *",
+    "label-prenom":"Enter your first name *",
+    "label-email":"Enter your email *",
+    "label-message":"Enter your message *",
     "btn-envoyer": "Send",
+    "champs-obligatoires": "* Required fields",
     "aside-dessins": "Drawings",
     "retour": "< Back"
 }
