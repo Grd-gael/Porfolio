@@ -7,7 +7,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
     <!-- Favicon -->
-    <!-- <link rel="icon" type="image/png" href="img/favicon.png"> -->
+    <link rel="icon" type="image/png" href="img/creature.png">
     <!-- Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,15 +30,21 @@
     <header>
         <nav>
             <div class="left-nav">
-                <div class="button-language"><span class="fr hide">FR</span><span class="en hide">EN</span></div><a
-                    href="index.html" class="title-portfolio">
+                <select id="language-selector">
+                    <option class="language-btn" value="fr">Français</button>
+                    <option class="language-btn" value="en">English</button>
+                </select>
+                <a href="index.html" class="title-portfolio">
                     <div class="aboreto title-nav">Portfolio</div>
                 </a>
             </div>
             <div class="right-nav">
-                <a href="projets.html" class="montserrat-400">Projets</a>
-                <a href="presentation.html" class="montserrat-400">Présentation</a>
-                <a href="contact.html" class="montserrat-400">Contact</a>
+                <a href="projets.html" 
+                data-translate-key="nav-projet" class="montserrat-400">Projets</a>
+                <a href="presentation.html"
+                data-translate-key="nav-presentation"  class="montserrat-400">Présentation</a>
+                <a href="contact.html" 
+                data-translate-key="nav-contact" class="montserrat-400">Contact</a>
             </div>
             <div class="menu">
                 <div class="burger">
@@ -53,13 +59,13 @@
         <div class="sidenav-placement">
             <ul>
                 <a href="projets.html" class="montserrat-200 cache1">
-                    <li>Projets</li>
+                    <li data-translate-key="nav-projet">Projets</li>
                 </a>
                 <div class="line cache4"></div><a href="presentation.html" class="montserrat-200 cache2">
-                    <li>Présentation</li>
+                    <li data-translate-key="nav-presentation" >Présentation</li>
                 </a>
-                <div class="line cache4"></div><a href="contacts.html" class="montserrat-200 cache3">
-                    <li>Contact</li>
+                <div class="line cache4"></div><a href="contact.html" class="montserrat-200 cache3">
+                    <li data-translate-key="nav-contact">Contact</li>
                 </a>
                 <div class="close-button"></div>
             </ul>
@@ -71,9 +77,7 @@
     </aside>
 
     <section class="grid-draw">
-        <div class="draw1">
-            <img src="img/draw/draw1.jpg" alt="">
-        </div>
+            <img class="draw1" src="img/draw/draw1.jpg" alt="">
         <div class="draw2">
             <img src="img/draw/draw2.jpg" alt="">
         </div>

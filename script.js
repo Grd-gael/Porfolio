@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
 
+
     // Sidenav
     const sidenavButton = document.querySelector('.menu');
 
@@ -122,27 +123,21 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     };
 
-
     // Back to top button
 
-    // const backToTopBtn = document.getElementById('back-to-top');
-    // if (!backToTopBtn) {
-    //     return;
-    // }
-    // else {
-    //     window.addEventListener('scroll', () => {
-    //         if (window.scrollY > 200) {
-    //             backToTopBtn.style.display = 'block';
-    //         } else {
-    //             backToTopBtn.style.display = 'none';
-    //         }
-    //     });
-    //     backToTopBtn.addEventListener('click', () => {
-    //         window.scrollTo({ top: 0, behavior: 'smooth' });
-    //     });
-    // }
-
-
+    const backToTopBtn = document.getElementById('back-to-top');
+    if (backToTopBtn) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 200) {
+                backToTopBtn.style.display = 'block';
+            } else {
+                backToTopBtn.style.display = 'none';
+            }
+        });
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
 
     // Form
 
@@ -193,7 +188,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Link PDF W3C
 
-    let targets=document.querySelectorAll('.target');
+    let targets = document.querySelectorAll('.target');
     targets.forEach((element) => {
         element.addEventListener('click', function (event) {
             var url = element.href;
@@ -201,6 +196,55 @@ document.addEventListener('DOMContentLoaded', function () {
             event.preventDefault();
         });
     });
+
+
+    // Langue LocalStorage
+ 
+ const savedLang = localStorage.getItem('language') || 'fr';
+    document.getElementById('language-selector').value = savedLang;
+
+    const selectedLang = document.getElementById('language-selector').value;
+
+    // Charger les traductions correspondantes
+    fetch(`${selectedLang}.json`)
+        .then(response => response.json())
+        .then(translations => {
+            document.querySelectorAll('[data-translate-key]').forEach(element => {
+                const key = element.getAttribute('data-translate-key');
+                element.innerHTML = translations[key];
+            });
+        });
+
+
+    // Traductions
+
+
+    document.getElementById('language-selector').addEventListener('change', (event) => {
+        const selectedLang = event.target.value;
+        localStorage.setItem('language', selectedLang); 
+
+        // Charger les traductions correspondantes
+        fetch(`${selectedLang}.json`)
+            .then(response => response.json())
+            .then(translations => {
+                document.querySelectorAll('[data-translate-key]').forEach(element => {
+                    const key = element.getAttribute('data-translate-key');
+                    element.innerHTML = translations[key];
+                });
+                if (selectedLang === 'fr') {
+                    document.querySelector('html').lang = 'fr';
+                    document.querySelector('.nom').placeholder = "Nom *";
+                    document.querySelector('.prenom').placeholder = "Prénom *";
+                    document.querySelector('.email').placeholder = "Email *";
+                    document.querySelector('.message').placeholder = "Message *";
+                }
+                else if (selectedLang === 'en') {
+                    document.querySelector('html').lang = 'en';
+                    document.querySelector('.nom').placeholder = "Last name* ";
+                    document.querySelector('.prenom').placeholder = "First name *";
+                    document.querySelector('.email').placeholder = "Email *";
+                    document.querySelector('.message').placeholder = "Message *";
+                }
+            });
+    });
 });
-
-

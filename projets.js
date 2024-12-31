@@ -18,24 +18,43 @@ document.addEventListener('DOMContentLoaded', function () {
             const popup = document.createElement('div');
             popup.classList.add('popup-projet');
             popup.classList.add(`popup-${project.id}`);
-            popup.innerHTML = `
-                    <div class=close></div>
-                    <div class="popup-left">
-                        <h3 class="aboreto popup-titre">${project.name}</h3>
-                        <p class="date montserrat-200">${project.date}</p>
-                        <p class="groupe montserrat-200">${project.groupe}</p>
-                        <img src="${project.image}" alt="" class="main-image">
-                        <div class="container-select-images"><img src="${project.image}" alt="" class="project-image image1 image-selected">
-                        <img src="${project.image2}" alt="" class="project-image image2">
-                        <img src="${project.image3}" alt="" class="project-image image3">
+            if (document.getElementById('language-selector').value === 'fr') {
+                popup.innerHTML = `
+                        <div class=close></div>
+                        <div class="popup-left">
+                            <h3 class="aboreto popup-titre">${project.name}</h3>
+                            <p class="date montserrat-200">${project.date}</p>
+                            <p class="groupe montserrat-200">${project.groupe}</p>
+                            <img src="${project.image}" alt="" class="main-image">
+                            <div class="container-select-images"><img src="${project.image}" alt="" class="project-image image1 image-selected">
+                            <img src="${project.image2}" alt="" class="project-image image2">
+                            <img src="${project.image3}" alt="" class="project-image image3">
+                            </div>
                         </div>
+                        <div class="popup-right">
+                            <p class="description montserrat-400">${project.description}</p>
+                            <p class="technologies montserrat-200">${project.technologies}</p>
+                            <a href="${project.link}" class="montserrat-400 button" target="_blank">Voir le projet</a>
+                        </div>
+                        `;
+            } else if (document.getElementById('language-selector').value === 'en') {
+                popup.innerHTML = `<div class=close></div>
+                <div class="popup-left">
+                    <h3 class="aboreto popup-titre">${project.name}</h3>
+                    <p class="date montserrat-200">${project.ENdate}</p>
+                    <p class="groupe montserrat-200">${project.ENgroupe}</p>
+                    <img src="${project.image}" alt="" class="main-image">
+                    <div class="container-select-images"><img src="${project.image}" alt="" class="project-image image1 image-selected">
+                    <img src="${project.image2}" alt="" class="project-image image2">
+                    <img src="${project.image3}" alt="" class="project-image image3">
                     </div>
-                    <div class="popup-right">
-                        <p class="description montserrat-400">${project.description}</p>
-                        <p class="technologies montserrat-200">${project.technologies}</p>
-                        <a href="${project.link}" class="montserrat-400 button" target="_blank">Voir le projet</a>
-                    </div>
-                    `;
+                </div>
+                <div class="popup-right">
+                    <p class="description montserrat-400">${project.ENdescription}</p>
+                    <p class="technologies montserrat-200">${project.technologies}</p>
+                    <a href="${project.link}" class="montserrat-400 button" target="_blank">View project</a>
+                </div>`;
+            };
             containerPopup.appendChild(popup);
 
             projectElement.addEventListener('click', function () {
@@ -92,10 +111,46 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
             });
 
-        });
-    })
+            const languageSelector = document.getElementById('language-selector');
 
-
-
-
+            languageSelector.addEventListener('change', function () {
+                if (languageSelector.value === 'fr') {
+                    popup.innerHTML = `<div class=close></div>
+                    <div class="popup-left">
+                        <h3 class="aboreto popup-titre">${project.name}</h3>
+                        <p class="date montserrat-200">${project.date}</p>
+                        <p class="groupe montserrat-200">${project.groupe}</p>
+                        <img src="${project.image}" alt="" class="main-image">
+                        <div class="container-select-images"><img src="${project.image}" alt="" class="project-image image1 image-selected">
+                        <img src="${project.image2}" alt="" class="project-image image2">
+                        <img src="${project.image3}" alt="" class="project-image image3">
+                        </div>
+                    </div>
+                    <div class="popup-right">
+                        <p class="description montserrat-400">${project.description}</p>
+                        <p class="technologies montserrat-200">${project.technologies}</p>
+                        <a href="${project.link}" class="montserrat-400 button" target="_blank">Voir le projet</a>
+                    </div>
+                    `}
+                else if (document.getElementById('language-selector').value === 'en') {
+                    popup.innerHTML = `<div class=close></div>
+                        <div class="popup-left">
+                            <h3 class="aboreto popup-titre">${project.name}</h3>
+                            <p class="date montserrat-200">${project.ENdate}</p>
+                            <p class="groupe montserrat-200">${project.ENgroupe}</p>
+                            <img src="${project.image}" alt="" class="main-image">
+                            <div class="container-select-images"><img src="${project.image}" alt="" class="project-image image1 image-selected">
+                            <img src="${project.image2}" alt="" class="project-image image2">
+                            <img src="${project.image3}" alt="" class="project-image image3">
+                            </div>
+                        </div>
+                        <div class="popup-right">
+                            <p class="description montserrat-400">${project.ENdescription}</p>
+                            <p class="technologies montserrat-200">${project.technologies}</p>
+                            <a href="${project.link}" class="montserrat-400 button" target="_blank">View project</a>
+                        </div>`;
+                };
+            });
+        })
+    });
 });

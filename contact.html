@@ -7,7 +7,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
     <!-- Favicon -->
-    <!-- <link rel="icon" type="image/png" href="img/favicon.png"> -->
+    <link rel="icon" type="image/png" href="img/creature.png">
     <!-- Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,15 +30,21 @@
     <header>
         <nav>
             <div class="left-nav">
-                <div class="button-language"><span class="fr hide">FR</span><span class="en hide">EN</span></div><a
-                    href="index.html" class="title-portfolio">
+                <select id="language-selector">
+                    <option class="language-btn" value="fr">Français</button>
+                    <option class="language-btn" value="en">English</button>
+                </select>
+                <a href="index.html" class="title-portfolio">
                     <div class="aboreto title-nav">Portfolio</div>
                 </a>
             </div>
             <div class="right-nav">
-                <a href="projets.html" class="montserrat-400">Projets</a>
-                <a href="presentation.html" class="montserrat-400">Présentation</a>
-                <a href="contact.html" class="montserrat-400">Contact</a>
+                <a href="projets.html" 
+                data-translate-key="nav-projet" class="montserrat-400">Projets</a>
+                <a href="presentation.html"
+                data-translate-key="nav-presentation"  class="montserrat-400">Présentation</a>
+                <a href="contact.html" 
+                data-translate-key="nav-contact" class="montserrat-400">Contact</a>
             </div>
             <div class="menu">
                 <div class="burger">
@@ -53,13 +59,13 @@
         <div class="sidenav-placement">
             <ul>
                 <a href="projets.html" class="montserrat-200 cache1">
-                    <li>Projets</li>
+                    <li data-translate-key="nav-projet">Projets</li>
                 </a>
                 <div class="line cache4"></div><a href="presentation.html" class="montserrat-200 cache2">
-                    <li>Présentation</li>
+                    <li data-translate-key="nav-presentation" >Présentation</li>
                 </a>
                 <div class="line cache4"></div><a href="contact.html" class="montserrat-200 cache3">
-                    <li>Contact</li>
+                    <li data-translate-key="nav-contact">Contact</li>
                 </a>
                 <div class="close-button"></div>
             </ul>
@@ -71,18 +77,18 @@
     </aside>
 
     <form method="post" id="form-contact">
-        <h2 class="aboreto title-form">Contactez moi !</h2>
+        <h2 data-translate-key="contactez-moi" class="aboreto title-form">Contactez moi !</h2>
         <div class="form-nom-prenom">
             <label for="nom" class="montserrat-200 hidden">Entrez votre nom</label>
-            <input type="text" placeholder="Nom *" class="nom" id="nom" name="nom" autocomplete="none">
+            <input type="text" placeholder="Nom *" class="nom" id="nom" name="nom" autocomplete="none" required>
             <label for="prenom" class="montserrat-200 hidden">Entrez votre prénom</label>
-            <input type="text" placeholder="Prénom *" class="prenom" id="prenom" name="prenom" autocomplete="none">
+            <input type="text" placeholder="Prénom *" class="prenom" id="prenom" name="prenom" autocomplete="none" required>
         </div>
         <label for="email" class="montserrat-200 hidden">Entrez votre email</label>
-        <input type="email" placeholder="Email *" class="email" id="email" name="email">
+        <input type="email" placeholder="Email *" class="email" id="email" name="email" required>
         <label for="message" class="montserrat-200 hidden">Entrez votre message</label>
-        <textarea name="" id="message" cols="40" rows="9" placeholder="Message *" class="message" name="message" autocomplete="none"></textarea>
-        <button type="submit" class="submit" n>Envoyer</button>
+        <textarea id="message" cols="40" rows="9" placeholder="Message *" class="message" name="message" autocomplete="none" required></textarea>
+        <button type="submit" class="submit" >Envoyer</button>
     </form>
 
     <div class="tooltip montserrat-200" id="tooltip"></div>
@@ -101,7 +107,8 @@
         }
     }
     ?> -->
-    
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="envoiMail.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
