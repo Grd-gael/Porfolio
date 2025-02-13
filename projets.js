@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
             popup.classList.add(`popup-${project.id}`);
             if (document.getElementById('language-selector').value === 'fr') {
                 popup.innerHTML = `
-                        <div class=close></div>
+                        <div class="close"></div>
                         <div class="popup-left">
                             <h3 class="aboreto popup-titre">${project.name}</h3>
                             <p class="date montserrat-200">${project.date}</p>
@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         </div>
                         `;
             } else if (document.getElementById('language-selector').value === 'en') {
-                popup.innerHTML = `<div class=close></div>
+                popup.innerHTML = `<div class="close"></div>
                 <div class="popup-left">
                     <h3 class="aboreto popup-titre">${project.name}</h3>
                     <p class="date montserrat-200">${project.ENdate}</p>
@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', function () {
             });
 
 
-            const close = document.querySelectorAll('.close');
+            let close = document.querySelectorAll('.close');
             close.forEach((close) => {
                 close.addEventListener('click', function () {
                     const activePopup = document.querySelector('.popup.visible');
@@ -115,7 +115,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             languageSelector.addEventListener('change', function () {
                 if (languageSelector.value === 'fr') {
-                    popup.innerHTML = `<div class=close></div>
+                    popup.innerHTML = `<div class='close'></div>
                     <div class="popup-left">
                         <h3 class="aboreto popup-titre">${project.name}</h3>
                         <p class="date montserrat-200">${project.date}</p>
@@ -131,9 +131,11 @@ document.addEventListener('DOMContentLoaded', function () {
                         <p class="technologies montserrat-200">${project.technologies}</p>
                         <a href="${project.link}" class="montserrat-400 button" target="_blank">Voir le projet</a>
                     </div>
-                    `}
+                    `;
+                    close = document.querySelectorAll('.close');
+                }
                 else if (document.getElementById('language-selector').value === 'en') {
-                    popup.innerHTML = `<div class=close></div>
+                    popup.innerHTML = `<div class='close'></div>
                         <div class="popup-left">
                             <h3 class="aboreto popup-titre">${project.name}</h3>
                             <p class="date montserrat-200">${project.ENdate}</p>
@@ -149,6 +151,7 @@ document.addEventListener('DOMContentLoaded', function () {
                             <p class="technologies montserrat-200">${project.technologies}</p>
                             <a href="${project.link}" class="montserrat-400 button" target="_blank">View project</a>
                         </div>`;
+                        close = document.querySelectorAll('.close');
                 };
             });
         })

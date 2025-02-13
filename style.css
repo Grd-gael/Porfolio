@@ -870,11 +870,12 @@ button:focus-visible {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     padding: 20px;
     top: 100%;
     left: 20vh;
     width: 80vw;
-    height: 80vh;
+    height: fit-content;
     border: solid var(--white) 1px;
     background-color: rgba(0, 0, 0, 0.8);
     z-index: 1000;
@@ -1050,6 +1051,92 @@ button:focus-visible {
     transform: translate(-50%, -50%) rotate(-45deg);
 }
 
+@media screen and (max-width: 1024px) {
+    .popup-projet {
+        width: 90vw;
+        height: 85vh;
+        left: 5vw;
+        top: 7vh;
+    }
+
+    .popup-left {
+        margin-left: 30px;
+        width: 60%;
+    }
+
+    .popup-right {
+        margin-right: 20px;
+        margin-top: 50px;
+    }
+
+    .main-image {
+        width: 350px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .popup-projet {
+        flex-direction: column;
+        align-items: center;
+        width: 95vw;
+        height: auto;
+        padding: 15px;
+    }
+
+    .popup-left, .popup-right {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .main-image {
+        width: 80%;
+    }
+
+    .container-select-images {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .image1, .image2, .image3 {
+        width: 80px;
+    }
+
+    .description, .technologies {
+        width: 80%;
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .popup-titre {
+        font-size: 2rem;
+    }
+
+    .date, .groupe {
+        font-size: 0.9rem;
+    }
+
+    .main-image {
+        width: 90%;
+    }
+
+    .image1, .image2, .image3 {
+        width: 60px;
+    }
+
+    .description, .technologies {
+        font-size: 0.9rem;
+        width: 90%;
+    }
+
+    .close {
+        width: 30px;
+        height: 30px;
+    }
+}
+
 
 /* Responsive styles */
 @media screen and (max-width: 1200px) {
@@ -1078,59 +1165,23 @@ button:focus-visible {
         transform: rotate(0deg) translateY(0);
     }
 
-    .projects-container {
-        flex-wrap: wrap;
-        height: auto;
-    }
-
     .project {
         position: relative;
         margin: 20px;
         transform: none;
     }
-
-
-    .popup-projet{
-        width: 90vw;
-        height: 90vh;
-        top: 200%;
+    .illustration{
         display: none;
-        flex-direction: column;
     }
-
-    .visible{
-        top: 0vh;
-        display: flex;
-    }
-
-    .popup-left,
-    .popup-right {
-        margin: 10px 0;
-        width: 100%;
-        max-width: 100%;
-    }
-
-    .popup-titre {
-        font-size: 2rem;
-    }
-
-    .container-select-images {
-        gap: 5px;
-    }
-
-    .image1,
-    .image2,
-    .image3 {
-        width: 60px;
-    }
-
-    .description,
-    .technologies {
-        font-size: 0.8rem;
-    }
-
     .link-draw{
-        bottom: -350px;
+        bottom: -80px;
+    }
+
+}
+
+@media screen and (max-width: 937px) {
+    .link-draw{
+        bottom: -400px;
     }
 }
 
@@ -1335,6 +1386,58 @@ svg.presentation-img {
         margin: auto;
     }
 
+}
+
+@media screen and (max-width: 1024px){
+    .bulle-container2 .bulle5, .bulle-container2 .bulle6 {
+        display: none;
+    }
+
+    .flex-responsive{
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bulle-container2 {
+        height: 390dvh;
+    }
+
+    aside h1 {
+        display: none;
+    }
+
+    .aside-presentation {
+        width: 150px;
+        height: 400%;
+    }
+
+    h1.title-page-responsive {
+        color: var(--white);
+        display: block;
+        font-size: 3rem;
+        margin: auto;
+
+    }
+
+    section.presentation-flex {
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+    }
+
+    section.competences-flex {
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        gap: 15vh;
+    }
+
+    .accordion:nth-child(2), .accordion:nth-child(3) {
+        margin: auto;
+    }
+    
 }
 
 .margin-right {
@@ -1656,7 +1759,7 @@ label {
     font-size: 1.2rem;
     text-decoration: underline;
     transition: all 0.5s ease;
-    margin-left: 20vw;
+    margin-left: 260px;
 }
 
 .link-retour:hover {
