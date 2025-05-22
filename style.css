@@ -1493,9 +1493,16 @@ li {
     list-style: none;
 }
 
-.opquast {
+.opquast{
     text-align: left;
     line-height: 1.7;
+}
+
+.opquast-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
     margin-bottom: 10vh;
 }
 
