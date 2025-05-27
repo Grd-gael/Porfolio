@@ -1506,6 +1506,11 @@ li {
     margin-bottom: 10vh;
 }
 
+.badge-opquast{
+    width: 40vw;
+    height: auto;
+}
+
 
 .accordion {
     width: 65vw;

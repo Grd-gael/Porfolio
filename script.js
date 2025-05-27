@@ -97,7 +97,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
             const isOpen = trigger.getAttribute('aria-expanded') === 'true';
 
-            console.log(isOpen);
 
             trigger.setAttribute('aria-expanded', !isOpen);
             trigger.parentElement.classList.toggle('accordion--opened');
@@ -158,7 +157,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 let positionInput = input.getBoundingClientRect();
                 let XI = positionInput.x;
                 let YI = positionInput.y;
-                console.log(positionInput);
                 tooltip.style.display = 'block';
                 tooltip.style.top = `${YI - 30}px`;
                 tooltip.style.left = `${XI}px`;
@@ -178,7 +176,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 let positionInput = input.getBoundingClientRect();
                 let XI = positionInput.x;
                 let YI = positionInput.y;
-                console.log(positionInput);
                 tooltip.style.display = 'block';
                 tooltip.style.top = `${YI - 30}px`;
                 tooltip.style.left = `${XI}px`;
