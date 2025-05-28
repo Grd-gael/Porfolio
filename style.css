@@ -1240,7 +1240,7 @@ button:focus-visible {
 
 .bulle-container2 {
     position: absolute;
-    height: 290dvh;
+    height: 340dvh;
     width: 100vw;
     z-index: -1;
     overflow: hidden;
@@ -1253,7 +1253,7 @@ aside {
 }
 
 .aside-presentation{
-    height: 270vh;
+    height: 300vh;
     margin-bottom: 10vh;
 }
 
