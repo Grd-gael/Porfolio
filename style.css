@@ -1500,14 +1500,15 @@ li {
 
 .opquast-section{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    gap:50px;
     justify-content: space-around;
     align-items: center;
     margin-bottom: 10vh;
 }
 
 .badge-opquast{
-    width: 40vw;
+    width: 60vw;
     height: auto;
 }
 
