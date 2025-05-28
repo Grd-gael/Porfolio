@@ -1502,14 +1502,15 @@ li {
     display: flex;
     flex-direction: column;
     gap:50px;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    margin-bottom: 10vh;
+    margin-bottom: 5vh;
 }
 
 .badge-opquast{
     width: 40vw;
     height: auto;
+    margin-right: 230px;
 }
 
 
