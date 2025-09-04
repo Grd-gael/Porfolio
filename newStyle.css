@@ -1,0 +1,126 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+:root{
+    --white: #F5F5F5;
+    --black: #424242;
+    --red: #FF3B3B;
+}
+
+@font-face {
+    font-family: 'Baunk';
+    src: 
+    local('Baunk'), 
+    url(font/Baunk.woff),
+    format('woff');
+    
+}
+
+.courier {
+  font-family: "Courier Prime", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.baunk {
+  font-family: "Baunk";
+  font-weight: 400;
+  font-style: normal;
+}
+
+.red {
+    color: var(--red);
+}
+
+body {
+    margin: 0 100px;
+    background-color: var(--white);
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 15vh;
+    text-align: start;
+}
+h1{
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+h2{
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+main{
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: start;
+
+}
+
+.point1{
+    position: relative;
+    animation: clignoter 2s infinite ease-in-out;
+    animation-delay: 0s;
+}
+.point2{
+    position: relative;
+    animation: clignoter 2s infinite ease-in-out;
+    animation-delay: 0.25s;
+}
+.point3{
+    position: relative;
+    animation: clignoter 2s infinite ease-in-out;
+    animation-delay: 0.5s;
+}
+
+main>p{
+    font-size: 3rem;
+    margin: 0;
+}
+
+h3{
+    font-size: 6.5rem;
+    margin: 0;
+}
+
+
+@keyframes clignoter {
+    20% {bottom: 0;}
+    50% {bottom: 20px;}
+    80% {bottom: 0;}
+}
+
+footer{
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.footer-links{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+a{
+    text-decoration: underline;
+    color: var(--black);
+    transition: all 0.3s;
+}
+
+a:hover{
+    color: var(--red);
+    
+}

@@ -244,4 +244,40 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
             });
     });
+
+    const spot = document.querySelector('.blur-mouse');
+    let x = window.innerWidth / 2;
+    let y = window.innerHeight / 2;
+    let rafId = null;
+
+
+    function moveSpot() {
+    spot.style.left = x + 'px';
+    spot.style.top = y + 'px';
+    rafId = null;
+    }
+
+
+    function onPointerMove(e) {
+    const p = e.touches ? e.touches[0] : e;
+    x = p.clientX;
+    y = p.clientY;
+    if (!rafId) rafId = requestAnimationFrame(moveSpot);
+    }
+
+
+    window.addEventListener('pointermove', onPointerMove, { passive: true });
+    window.addEventListener('touchmove', onPointerMove, { passive: true });
+
+
+    // Recentrer si la fenêtre change de taille
+    window.addEventListener('resize', () => {
+    x = window.innerWidth / 2;
+    y = window.innerHeight / 2;
+    moveSpot();
+    });
+
+
+    // Position initiale
+    moveSpot();
 });
