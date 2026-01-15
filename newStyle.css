@@ -13,7 +13,7 @@
 
 @font-face {
   font-family: "Baunk";
-  src: url("/fonts/Baunk.woff") format("woff");
+  src: url("font/Baunk.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
