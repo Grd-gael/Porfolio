@@ -12,7 +12,7 @@
 }
 
 @font-face {
-  font-family: "baunkregular";
+  font-family: "Baunk";
   src: url("/fonts/baunk-webfont.woff2") format("woff2"),
     url("/fonts/baunk-webfont.woff") format("woff");
   font-weight: normal;
