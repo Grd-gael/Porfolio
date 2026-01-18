@@ -13,29 +13,60 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
 
+  // Texte qui apparaît 
 
-  const fullText = `Passionné par le numérique et la création qui en découle,
-    je souhaite constamment apprendre de nouvelles manière de
-    susciter l’attention à travers mes projets web.`;
+  const TextAppear = (text, container, start, end) => {
+    const textElement = container;
 
-  const textElement = document.getElementById("presentation-text");
+    window.addEventListener("scroll", () => {
+      const scrollY = window.scrollY;
 
-  window.addEventListener("scroll", () => {
-    const start = 2250;  // px où commence l’écriture
-    const end = 3900;    // px où tout le texte est affiché
-    const scrollY = window.scrollY;
+      if (scrollY < start) {
+        textElement.textContent = "";
+      } else if (scrollY > end) {
+        textElement.textContent = text;
+      } else {
+        // progress de 0 → 1
+        const progress = (scrollY - start) / (end - start);
+        const charsToShow = Math.floor(progress * text.length);
+        textElement.textContent = text.slice(0, charsToShow);
+      }
+    });
+  };
 
-    if (scrollY < start) {
-      textElement.textContent = "";
-    } else if (scrollY > end) {
-      textElement.textContent = fullText;
-    } else {
-      // progress de 0 → 1
-      const progress = (scrollY - start) / (end - start);
-      const charsToShow = Math.floor(progress * fullText.length);
-      textElement.textContent = fullText.slice(0, charsToShow);
-    }
-  });
+
+
+  const PresentationText1 = `Avec l’objectif d’être un développeur polyvalent,
+    j'ai cette envie constante d’apprendre de nouvelles technologies
+     pour lier technique et créativité dans des expériences web engageantes.`;
+
+
+  const textElement1 = document.getElementById("presentation-text-1");
+
+  TextAppear(PresentationText1, textElement1, 2250, 3900);
+
+  const PresentationText2 = `Du front-end au back-end,
+  j'ai la volonté de développer des projets complets, 
+  en gardant toujours en tête l’expérience utilisateur.`;
+
+
+  const textElement2 = document.getElementById("presentation-text-2");
+
+  TextAppear(PresentationText2, textElement2, 4250, 5900);
+
+  const PresentationText3 = `J’aime imaginer des sites agréables à découvrir,
+    techniquement propres et esthétiquement plaisants,
+    avec l’envie constante de faire mieux à chaque projet.`;
+
+
+  const textElement3 = document.getElementById("presentation-text-3");
+
+  TextAppear(PresentationText3, textElement3, 6250, 7900);
+
+
+
+
+
 
 
 
@@ -172,11 +203,11 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   document.querySelector('#Mail').addEventListener('mouseover', function () {
-    this.children[0].src = 'img/icone_px/email-hover.png';
+    this.children[0].children[0].src = 'img/icone_px/email-hover.png';
   });
 
   document.querySelector('#Mail').addEventListener('mouseout', function () {
-    this.children[0].src = 'img/icone_px/email.png';
+    this.children[0].children[0].src = 'img/icone_px/email.png';
   });
 
   document.querySelector('#Internet').addEventListener('mouseover', function () {

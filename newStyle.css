@@ -44,7 +44,7 @@ body {
 }
 
 .body-internet {
-  height: 2000vh !important;
+  height: 11000px !important;
 }
 
 body:active {
@@ -70,12 +70,6 @@ header {
   align-items: flex-start;
   height: 15vh;
   text-align: start;
-}
-
-p {
-  font-family: "Inconsolata", monospace;
-  font-weight: 400;
-  font-style: normal;
 }
 
 h1 {
@@ -470,7 +464,7 @@ li {
 
 main .title-accueil {
   position: absolute;
-  bottom: 0;
+  bottom: 20px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -556,13 +550,97 @@ main .title-accueil {
   }
 }
 
-/* Texte écrit */
-
-#presentation-text {
+.presentation-text {
   font-size: 1rem;
   line-height: 1.5;
   white-space: pre-line;
   overflow: hidden;
+  margin-bottom: 3rem;
+}
+
+.me-location {
+  position: absolute;
+  top: 0;
+  left: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.me-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 8vh;
+}
+
+.me-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 6vw;
+}
+
+.illustration-me {
+  width: auto;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.me-links {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.me-btn {
+  font-family: "Inconsolata", monospace;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: var(--red);
+  border: 2px solid var(--red);
+  padding: 1rem 2.5rem;
+  min-width: 220px;
+  text-align: center;
+  letter-spacing: 2px;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.3s ease;
+}
+
+.me-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--red);
+  transform: translateX(-100%);
+  transition: transform 0.4s ease;
+  z-index: -1;
+}
+
+.me-btn:hover::before {
+  transform: translateX(0);
+}
+
+.me-btn:hover {
+  color: #fff;
+}
+
+@media (max-width: 900px) {
+  .me-content {
+    text-align: center;
+  }
+
+  .me-links {
+    align-items: center;
+  }
+
+  .illustration-me {
+    max-height: 45vh;
+  }
 }
 
 /* Ordinateur */
