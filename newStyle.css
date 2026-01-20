@@ -8,12 +8,15 @@
   --black: #424242;
   --red: #e90000;
   --light-red: #ff4d4d;
-  cursor: url("../img/icone_px/cursor2.cur") 30 18, auto;
+  cursor:
+    url("../img/icone_px/cursor2.cur") 30 18,
+    auto;
 }
 
 @font-face {
   font-family: "Baunk";
-  src: url("/fonts/baunk-webfont.woff2") format("woff2"),
+  src:
+    url("/fonts/baunk-webfont.woff2") format("woff2"),
     url("/fonts/baunk-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
@@ -44,11 +47,13 @@ body {
 }
 
 .body-internet {
-  height: 11000px !important;
+  height: 11600px !important;
 }
 
 body:active {
-  cursor: url("../img/icone_px/cursor-click.cur") 30 18, auto;
+  cursor:
+    url("../img/icone_px/cursor-click.cur") 30 18,
+    auto;
 }
 
 header {
@@ -160,7 +165,9 @@ footer {
   justify-content: space-between;
   text-align: center;
   background-color: var(--red);
-  box-shadow: inset 0 -4px 10px #720000, inset 0 8px 20px #ff7676;
+  box-shadow:
+    inset 0 -4px 10px #720000,
+    inset 0 8px 20px #ff7676;
   color: var(--white);
   z-index: 9999;
 }
@@ -192,8 +199,12 @@ footer {
   height: 100%;
   padding: 0px 20px;
   background-color: var(--light-red);
-  box-shadow: inset 2px -4px 10px #720000, inset 0 8px 20px #fe9090;
-  cursor: url("../img/icone_px/pointer.cur") 30 18, pointer;
+  box-shadow:
+    inset 2px -4px 10px #720000,
+    inset 0 8px 20px #fe9090;
+  cursor:
+    url("../img/icone_px/pointer.cur") 30 18,
+    pointer;
 }
 /* 
 
@@ -283,7 +294,9 @@ footer {
   );
 
   border-radius: 10px 10px 0 0;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), inset 0 2px 5px #ff9b9b,
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.6),
+    inset 0 2px 5px #ff9b9b,
     inset 0 -5px 10px #5a0000;
 
   overflow: hidden;
@@ -334,7 +347,9 @@ footer {
   font-size: 14px;
   color: #8b0000;
   font-weight: bold;
-  cursor: url("../img/icone_px/pointer.cur") 30 18, pointer;
+  cursor:
+    url("../img/icone_px/pointer.cur") 30 18,
+    pointer;
 }
 
 .start-menu-row:hover {
@@ -370,7 +385,9 @@ footer {
 }
 
 .start-menu-footer a:active {
-  box-shadow: inset 0 3px 6px #a00000, inset 0 -1px 2px #ffffff;
+  box-shadow:
+    inset 0 3px 6px #a00000,
+    inset 0 -1px 2px #ffffff;
   transform: translateY(1px);
 }
 
@@ -381,7 +398,9 @@ footer {
 
 .start-menu-button {
   background: linear-gradient(#ff4c4c, #8b0000);
-  box-shadow: inset 0 2px 4px #ffb3b3, inset 0 -3px 5px #5a0000;
+  box-shadow:
+    inset 0 2px 4px #ffb3b3,
+    inset 0 -3px 5px #5a0000;
   border-radius: 0 10px 10px 0;
 }
 
@@ -393,7 +412,9 @@ footer {
 
 .footer-infos {
   background-color: var(--light-red);
-  box-shadow: inset 0 -4px 10px #720000, inset 0 8px 20px #fe9090;
+  box-shadow:
+    inset 0 -4px 10px #720000,
+    inset 0 8px 20px #fe9090;
   padding: 0 0 0 20px;
 }
 
@@ -413,11 +434,15 @@ footer {
 .icon-son {
   width: 30px;
   height: 30px;
-  cursor: url("../img/icone_px/pointer.cur") 30 18, pointer;
+  cursor:
+    url("../img/icone_px/pointer.cur") 30 18,
+    pointer;
 }
 
 .icon-son:active {
-  cursor: url("../img/icone_px/pointer-click.cur") 30 18, pointer;
+  cursor:
+    url("../img/icone_px/pointer-click.cur") 30 18,
+    pointer;
 }
 
 .sound-bar input[type="range"] {
@@ -430,7 +455,9 @@ footer {
   background: var(--white);
   border-radius: 5px;
   outline: none;
-  cursor: url("../img/icone_px/pointer.cur") 30 18, pointer;
+  cursor:
+    url("../img/icone_px/pointer.cur") 30 18,
+    pointer;
 }
 
 a {
@@ -444,7 +471,9 @@ a {
 
 a:hover {
   text-decoration: none;
-  cursor: url("../img/icone_px/pointer.cur") 30 18, pointer;
+  cursor:
+    url("../img/icone_px/pointer.cur") 30 18,
+    pointer;
 }
 
 /* Accueil */
@@ -680,13 +709,17 @@ main .title-accueil {
   align-items: center;
   gap: 10px;
   padding: 5px 10px;
-  cursor: url("../img/icone_px/pointer.cur") 30 18, pointer;
+  cursor:
+    url("../img/icone_px/pointer.cur") 30 18,
+    pointer;
   height: 120px;
   width: 120px;
 }
 
 .icone-ordi:active {
-  cursor: url("../img/icone_px/pointer-click.cur") 30 18, pointer;
+  cursor:
+    url("../img/icone_px/pointer-click.cur") 30 18,
+    pointer;
 }
 
 .icone-ordi img {
@@ -739,7 +772,9 @@ main .title-accueil {
   background-color: var(--white);
   display: none;
   flex-direction: column;
-  cursor: url("../img/icone_px/cursor2.cur") 30 18, auto;
+  cursor:
+    url("../img/icone_px/cursor2.cur") 30 18,
+    auto;
   z-index: 1000;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
 }
@@ -753,12 +788,18 @@ main .title-accueil {
   color: white;
   font-weight: bold;
   border-radius: 5px 0 0 0;
-  cursor: url("../img/icone_px/grab.cur") 30 18, auto;
-  box-shadow: inset -4px -4px 10px #720000, inset 4px 4px 20px #ff7676;
+  cursor:
+    url("../img/icone_px/grab.cur") 30 18,
+    auto;
+  box-shadow:
+    inset -4px -4px 10px #720000,
+    inset 4px 4px 20px #ff7676;
 }
 
 .popup-header:active {
-  cursor: url("../img/icone_px/grabbing.cur") 30 18, auto;
+  cursor:
+    url("../img/icone_px/grabbing.cur") 30 18,
+    auto;
 }
 
 .popup-close {
@@ -771,21 +812,29 @@ main .title-accueil {
   border-bottom: none;
   outline: var(--white) 0.5px solid;
   box-shadow: var(--black) 1px 1px 2px 1px;
-  cursor: url("../img/icone_px/pointer.cur") 30 18, pointer;
+  cursor:
+    url("../img/icone_px/pointer.cur") 30 18,
+    pointer;
 }
 
 .popup-close:active {
-  cursor: url("../img/icone_px/pointer-click.cur") 30 18, pointer;
+  cursor:
+    url("../img/icone_px/pointer-click.cur") 30 18,
+    pointer;
 }
 
 .popup-body {
   padding: 15px;
   flex: 1;
-  cursor: url("../img/icone_px/cursor2.cur") 30 18, auto;
+  cursor:
+    url("../img/icone_px/cursor2.cur") 30 18,
+    auto;
 }
 
 .popup-body:active {
-  cursor: url("../img/icone_px/cursor-click.cur") 30 18, auto;
+  cursor:
+    url("../img/icone_px/cursor-click.cur") 30 18,
+    auto;
 }
 
 #popup-presentation {
@@ -811,7 +860,9 @@ main .title-accueil {
   background-color: var(--light-red);
   color: var(--white);
   border: var(--white);
-  cursor: url("../img/icone_px/pointer.cur") 30 18, pointer;
+  cursor:
+    url("../img/icone_px/pointer.cur") 30 18,
+    pointer;
 }
 
 #popup-mail {
@@ -898,10 +949,14 @@ main .title-accueil {
   background-color: var(--light-red);
   color: var(--white);
   border: var(--white);
-  cursor: url("../img/icone_px/pointer.cur") 30 18, pointer;
+  cursor:
+    url("../img/icone_px/pointer.cur") 30 18,
+    pointer;
 }
 .button-choice:active {
-  cursor: url("../img/icone_px/pointer-click.cur") 30 18, pointer;
+  cursor:
+    url("../img/icone_px/pointer-click.cur") 30 18,
+    pointer;
 }
 
 #button-yes-poweroff {
