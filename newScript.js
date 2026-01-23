@@ -341,5 +341,36 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
+  // TOOLTIP PROJETS
+
+  let projectLines = document.querySelectorAll('.project-line');
+  let tooltip = document.getElementById('tooltip');
+  let tooltipImage = document.getElementById('tooltip-image');
+
+  projectLines.forEach((projectLine) => {
+    projectLine.addEventListener('mouseenter', (e) => {
+      tooltip.style.display = "block";
+      if (projectLine.getAttribute('data-img')) {
+        tooltipImage.src = projectLine.getAttribute('data-img');
+      }
+      else {
+        tooltipImage.src = "img/image_ascii/ascii-illustration-red.png"
+      }
+      tooltip.style.top = e.clientY - tooltip.offsetHeight + "px";
+      tooltip.style.left = e.clientX + 18 + "px";
+    });
+    projectLine.addEventListener('mousemove', (e) => {
+      tooltip.style.top = e.clientY - tooltip.offsetHeight + "px";
+      tooltip.style.left = e.clientX + 18 + "px";
+    });
+
+    projectLine.addEventListener('mouseleave', (e) => {
+      tooltip.style.display = "none";
+    });
+
+  })
+
+
+
 
 });
